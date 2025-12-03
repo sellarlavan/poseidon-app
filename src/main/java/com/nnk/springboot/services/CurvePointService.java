@@ -22,7 +22,7 @@ public class CurvePointService {
 
     public CurvePoint findById(Integer id) {
         return curvePointRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Invalid CurvePoint Id: " + id));
+                .orElseThrow(() -> new IllegalArgumentException("Invalid CurvePoint Id: " + id));
     }
 
     public CurvePoint update(Integer id, CurvePoint updatedCurvePoint) {

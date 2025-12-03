@@ -24,7 +24,7 @@ public class RuleNameService {
 
     public RuleName findById(Integer id) {
         return ruleNameRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Invalid RuleName Id: " + id));
+                .orElseThrow(() -> new IllegalArgumentException("Invalid RuleName Id: " + id));
     }
 
     public RuleName update(Integer id, RuleName updatedRule) {

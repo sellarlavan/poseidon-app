@@ -24,7 +24,7 @@ public class RatingService {
 
     public Rating findById(Integer id) {
         return ratingRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Invalid Rating Id:" + id));
+                .orElseThrow(() -> new IllegalArgumentException("Invalid Rating Id:" + id));
     }
 
     public Rating update(Integer id, Rating updatedRating) {

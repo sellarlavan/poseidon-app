@@ -24,7 +24,7 @@ public class TradeService {
 
     public Trade findById(Integer id) {
         return tradeRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Invalid Trade Id: " + id));
+                .orElseThrow(() -> new IllegalArgumentException("Invalid Trade Id: " + id));
     }
 
     public Trade update(Integer id, Trade updatedTrade) {
