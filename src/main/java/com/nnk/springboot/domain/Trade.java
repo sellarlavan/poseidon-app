@@ -5,18 +5,13 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
 import jakarta.validation.constraints.Size;
-import jakarta.validation.Valid;
 import lombok.Data;
-
-import java.sql.Timestamp;
 import java.time.LocalDateTime;
-
 
 @Entity
 @Table(name = "trade")
 @Data
 public class Trade {
-    // TODO: Map columns in data table TRADE with corresponding java fields
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -83,6 +78,5 @@ public class Trade {
         this.account = account;
         this.type = type;
     }
-
 
 }

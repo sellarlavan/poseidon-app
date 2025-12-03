@@ -1,24 +1,15 @@
 package com.nnk.springboot.domain;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Positive;
 import lombok.Data;
-import org.hibernate.validator.constraints.Length;
-
 import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Size;
-import jakarta.validation.Valid;
-
-import java.sql.Timestamp;
 import java.time.LocalDateTime;
-
 
 @Entity
 @Table(name = "curvepoint")
 @Data
 public class CurvePoint {
-    // TODO: Map columns in data table CURVEPOINT with corresponding java fields
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -45,6 +36,5 @@ public class CurvePoint {
         this.term = term;
         this.value = value;
     }
-
 
 }

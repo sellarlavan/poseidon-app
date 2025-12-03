@@ -84,7 +84,6 @@ class BidListServiceTest {
         verify(bidListRepository).save(existingBid);
     }
 
-
     @Test
     void testDelete() {
         BidList bid = new BidList();
